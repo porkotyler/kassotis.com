@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}{block:PortuguesePT}pt{/block:PortuguesePT}{block:PortugueseBR}pt{/block:PortugueseBR}{block:Dutch}nl{/block:Dutch}{block:Korean}ko{/block:Korean}">
+  <head>    <meta charset="UTF-8">
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+    {block:Description}<meta name="description" content="{block:IndexPage}{MetaDescription}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}">{/block:Description}
+    <meta name=”keywords” content=”{block:IndexPage}{text:Keywords}{/block:IndexPage}{block:Permalink}{block:Posts} {block:Tags},{Tag}{/block:Tags}{/block:Posts}{/block:Permalink}”>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="alternate" type="application/rss+xml" title="{Title}" href="{RSS}">
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+
+    <!-- Facebook OpenGraph -->
+
+    {block:IndexPage}
+    <meta property="og:title" content="{Title}">
+    <meta property="og:description" content="{MetaDescription}">
+    <meta property="og:url" content="{BlogURL}">
+    <meta property="og:type" content="tumblr-feed:tumblelog">
+    <meta property="og:image" content="{PortraitURL-128}">
+    {/block:IndexPage}
+
+    {block:PermalinkPage}
+    <meta property="og:title" content="{Title}{block:PostSummary} — {PostSummary}{/block:PostSummary}">
+    <meta property="og:description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}">
+    <meta property="og:url" content="{Permalink}">
+    <meta property="og:site_name" content="{Title}">
+    <meta property="og:type" content="article">
+
+    {block:Posts}
+    {block:Photo}<meta property="og:image" content="{PhotoURL-250}">{/block:Photo}
+    {block:Photoset}{block:Photos}<meta property="og:image" content="{PhotoURL-250}">{/block:Photos}{/block:Photoset}
+    {block:Quote}<meta property="og:image" content="{PortraitURL-64}">{/block:Quote}
+    {block:Link}<meta property="og:image" content="{PortraitURL-64}">{/block:Link}
+    {block:Chat}<meta property="og:image" content="{PortraitURL-64}">{/block:Chat}
+    {block:Answer}<meta property="og:image" content="{PortraitURL-64}">{/block:Answer}
+    {block:Audio}{block:AlbumArt}<meta property="og:image" content="{AlbumArtURL}">{/block:AlbumArt}{/block:Audio}
+    {block:Video}{block:VideoThumbnail}<meta property="og:image" content="{VideoThumbnailURL}">{/block:VideoThumbnail}{/block:Video}
+
+    {block:Date}
+    <!-- Canonical & Shortlink -->
+    <link rel="canonical" href="{Permalink}">
+    <link rel="shortlink" href="{ShortURL}">
+    {/block:Date}
+    {/block:Posts}
+
+    {/block:PermalinkPage}
+
+
+    {block:IfGoogleAnalyticsID}
+    <!-- Google Analytics ///////////////////////////////////////////////////////////////////////// -->
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{text:Google Analytics ID}', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- /Google Analytics -->
+    {/block:IfGoogleAnalyticsID}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Google Fonts-->{block:IfHeadingGoogleFont}
+    <link href="https://fonts.googleapis.com/css?family={text:Heading Google Font}:400,700" rel="stylesheet" type="text/css">{/block:IfHeadingGoogleFont}
+    {block:IfBodyGoogleFont}
+    <link href="https://fonts.googleapis.com/css?family={text:Body Google Font}:400,400italic,700,700italic" rel="stylesheet" type="text/css">{/block:IfBodyGoogleFont}
+    {block:IfLogoGoogleFont}
+    <link href="https://fonts.googleapis.com/css?family={text:Logo Google Font}:400,400italic,700,700italic" rel="stylesheet" type="text/css">{/block:IfLogoGoogleFont}
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://static.tumblr.com/jdtmwxl/M0Rnzei2x/resume.css">
+    <!-- Skin CSS ///////////////////////////////////////////////////////////////////////////////////////-->
+    <style>body,
+.post-text h1, .post-text h2, .post-text h3, .post-text h4, .post-text h5, .post-text h6 {
+    font-family: {block:IfBodyGoogleFont}"{text:Body Google Font}", {/block:IfBodyGoogleFont}sans-serif;
+
+    }
+
+h1, .h1 { font-family: {block:IfLogoGoogleFont}"{text:Logo Google Font}", {/block:IfLogoGoogleFont}sans-serif; }
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .hf, .btn,
+.more_notes_link,
+.widget-newsletter input[type="submit"] { font-family: {block:IfHeadingGoogleFont} "{text:Heading Google Font}", {/block:IfHeadingGoogleFont}sans-serif; }
+
+a, a:focus, a:hover { color: {color:Text} }
+
+{block:IfCapitalizeTitles}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .hf,
+.widget-newsletter input[type="submit"] { text-transform: uppercase }
+{/block:IfCapitalizeTitles}
+
+body {
+    background-color: {color:Background};
+    color: {color:Text};
+    }
+
+
+/* Branding */
+.cover { background-image: url({image:Cover}) }
+
+@media (min-width: 768px) {
+    .is-nothome .brand-container:before { background-image: url({image:Page Top}) }
+    }
+
+.logo-img { height:{text:Logo Cover Height} }
+.logopage-img { height:{text:Logo Page Height} }
+
+{block:ifBrandingTransparency}
+.brand { background-color: transparent }
+{/block:ifBrandingTransparency}
+.is-nothome .brand { background-color: {color:Branding Background} }
+
+.thumbnail-wrap { border-color: RGBA({RGBcolor:Text},.1) }
+.page-number.current { border-bottom-color: {color:Text} }
+
+
+
+/* Blocks Colors */
+.hire-box           { background-color: {color:Hire Background} }
+.site-footer        { background-color: {color:Footer Background} }
+.block-about        { background-color: {color:About Background} }
+.block-skills       { background-color: {color:Skills Background} }
+.block-showcase     { background-color: {color:Showcase Background} }
+.block-testimonials { background-color: {color:Testimonials Background} }
+.block-clients      { background-color: {color:Clients Background} }
+.block-contact      { background-color: {color:Contact Background} }
+.block-newsletter   { background-color: {color:Newsletter Background} }
+.sidebar            { background-color: {color:Sidebar Background} }
+.notes              { background-color: {color:Notes Background} }
+.nav-tagslist       { background-color: {color:Tags Nav Background} }
+.nav-tagslist:before { border-bottom: 1rem solid {color:Tags Nav Background} }
+
+.skill-percentage   { background-color: {color:Accent Background} }
+
+
+/* Thumbnails */
+.thumbnail-hover        { background-color: {color:Thumbnail Hover Background} }
+.thumbnail-wrap-text    { background-color: {color:Text Thumbnail Background} }
+.thumbnail-wrap-chat    { background-color: {color:Chat Thumbnail Background} }
+.thumbnail-wrap-quote   { background-color: {color:Quote Thumbnail Background} }
+.thumbnail-wrap-answer  { background-color: {color:Answer Thumbnail Background} }
+.thumbnail-wrap-link    { background-color: {color:Link Thumbnail Background} }
+
+
+{block:ifShowHire}
+/* hire box */
+@media (min-width: 768px){
+    .is-home .topbar .row { background-color: {color:Hire Background} }
+}
+
+{/block:ifShowHire}
+
+
+/* Buttons */
+.more_notes_link {
+    background:{color:Text};
+    color: {color:Background} ;
+    }
+
+.btn-accent,
+.widget-newsletter input[type="submit"] {
+    background-color: {color:Accent Background} !important;
+    color: {color:Accent Text} !important;
+    border: 2px solid {color:Accent Background};
+    }
+
+.btn-accent:hover, .btn-accent:focus,
+.widget-newsletter input[type="submit"]:hover, .widget-newsletter input[type="submit"]:focus {
+    background-color: {color:Accent Text} !important;
+    color: {color:Accent Background} !important;
+    border: 2px solid {color:Accent Background};
+    }
+
+/* Subnav */
+.nav-tag:hover, .nav-tag:focus { color: {color:Tags Nav Background} }
+
+/* Widgets */
+.widget-title {
+    color: {color:Accent Background};
+    border: 2px solid {color:Accent Background}
+    }
+
+.sidebar .btn-square {
+    background: {color:Accent Background};
+    color: {color:Accent Text}
+    }
+
+.sidebar .btn-outline {
+    background: {color:Accent Text};
+    color: {color:Accent Background}
+    }
+
+.share-btn { background:{color:Text} }
+.page-share { border-bottom-color: RGBA({RGBcolor:Text},.5) }
+.post-tags { border-top-color: RGBA({RGBcolor:Text},.5) }
+
+.post-navigation a {
+    background: RGBA({RGBcolor:Text},.1);
+    color:{color:Text}
+    }
+.post-navigation a:hover, .post-navigation a:focus,
+.tag-link:focus, .tag-link:hover {
+    background: RGBA({RGBcolor:Text},.3)
+    }
+
+.tag-link { background: RGBA({RGBcolor:Text},.1) }
+
+.chat-line { border-bottom-color: RGBA({RGBcolor:Text},.1) }
+
+
+
+
+
+
+
+{block:IfHideTumblrControls}
+/* Hides Tumblr Controls */
+#tumblr_controls.visible { display: none !important }
+{/block:IfHideTumblrControls}
+    </style>
+    <!-- Custom CSS /////////////////////////////////////////////////////////////////////////////////////-->
+    <style>{CustomCSS}</style>{block:Hidden}
+    <!-- THEME OPTIONS /////////////////////////////////////////////////////////////////////////////////-->
+    <!-- Colors-->
+    <meta name="color:Background" content="#ffffff">
+    <meta name="color:Text" content="#000000">
+    <meta name="color:Accent Background" content="#ffff00">
+    <meta name="color:Accent Text" content="#000000">
+    <meta name="color:About Background" content="#000000">
+    <meta name="color:Branding Background" content="#000000">
+    <meta name="color:Clients Background" content="#ffffff">
+    <meta name="color:Contact Background" content="#e7e7e7">
+    <meta name="color:Footer Background" content="#000000">
+    <meta name="color:Hire Background" content="#ffff00">
+    <meta name="color:Newsletter Background" content="#000000">
+    <meta name="color:Notes Background" content="#e7e7e7">
+    <meta name="color:Sidebar Background" content="#000000">
+    <meta name="color:Showcase Background" content="#ffffff">
+    <meta name="color:Skills Background" content="#e7e7e7">
+    <meta name="color:Tags Nav Background" content="#ffff00">
+    <meta name="color:Testimonials Background" content="#e7e7e7">
+    <meta name="color:Text Thumbnail Background" content="#000000">
+    <meta name="color:Chat Thumbnail Background" content="#000000">
+    <meta name="color:Link Thumbnail Background" content="#efefef">
+    <meta name="color:Quote Thumbnail Background" content="#ffffff">
+    <meta name="color:Answer Thumbnail Background" content="#000000">
+    <meta name="color:Thumbnail Hover Background" content="#000000">
+    <!-- Fonts - add font family name like "Open Sans"-->
+    <meta name="text:Logo Google Font" content="Montserrat">
+    <meta name="text:Heading Google Font" content="Montserrat">
+    <meta name="text:Body Google Font" content="Domine">
+    <meta name="if:Capitalize Titles" content="1">
+    <!-- Branding-->
+    <meta name="image:Logo Cover" content="">
+    <meta name="image:Logo Page" content="">
+    <meta name="image:Cover" content="">
+    <meta name="image:Page Top" content="">
+    <meta name="text:Tagline" content="">
+    <meta name="text:Logo Cover Height" content="100px">
+    <meta name="text:Logo Page Height" content="60px">
+    <meta name="if:Branding Transparency" content="1">
+    <meta name="if:Show Social Media Icons" content="1">
+    <meta name="select:Branding Align" content="box-left" title="Left">
+    <meta name="select:Branding Align" content="box-center" title="Center">
+    <meta name="select:Branding Align" content="box-right" title="Right">
+    <!-- Buttons Style-->
+    <meta name="select:Buttons Style" content="btn-square" title="Square">
+    <meta name="select:Buttons Style" content="btn-round" title="Rounded">
+    <meta name="select:Buttons Style" content="btn-pill" title="Pill">
+    <!-- Block Ordering-->
+    <meta name="select:About Position" content="order-1" title="1">
+    <meta name="select:About Position" content="order-2" title="2">
+    <meta name="select:About Position" content="order-3" title="3">
+    <meta name="select:About Position" content="order-4" title="4">
+    <meta name="select:About Position" content="order-5" title="5">
+    <meta name="select:About Position" content="order-6" title="6">
+    <meta name="select:About Position" content="order-7" title="7">
+    <meta name="select:Skills Position" content="order-1" title="1">
+    <meta name="select:Skills Position" content="order-2" title="2">
+    <meta name="select:Skills Position" content="order-3" title="3">
+    <meta name="select:Skills Position" content="order-4" title="4">
+    <meta name="select:Skills Position" content="order-5" title="5">
+    <meta name="select:Skills Position" content="order-6" title="6">
+    <meta name="select:Skills Position" content="order-7" title="7">
+    <meta name="select:Showcase Position" content="order-1" title="1">
+    <meta name="select:Showcase Position" content="order-2" title="2">
+    <meta name="select:Showcase Position" content="order-3" title="3">
+    <meta name="select:Showcase Position" content="order-4" title="4">
+    <meta name="select:Showcase Position" content="order-5" title="5">
+    <meta name="select:Showcase Position" content="order-6" title="6">
+    <meta name="select:Showcase Position" content="order-7" title="7">
+    <meta name="select:Testimonials Position" content="order-1" title="1">
+    <meta name="select:Testimonials Position" content="order-2" title="2">
+    <meta name="select:Testimonials Position" content="order-3" title="3">
+    <meta name="select:Testimonials Position" content="order-4" title="4">
+    <meta name="select:Testimonials Position" content="order-5" title="5">
+    <meta name="select:Testimonials Position" content="order-6" title="6">
+    <meta name="select:Testimonials Position" content="order-7" title="7">
+    <meta name="select:Clients Position" content="order-1" title="1">
+    <meta name="select:Clients Position" content="order-2" title="2">
+    <meta name="select:Clients Position" content="order-3" title="3">
+    <meta name="select:Clients Position" content="order-4" title="4">
+    <meta name="select:Clients Position" content="order-5" title="5">
+    <meta name="select:Clients Position" content="order-6" title="6">
+    <meta name="select:Clients Position" content="order-7" title="7">
+    <meta name="select:Contact Position" content="order-1" title="1">
+    <meta name="select:Contact Position" content="order-2" title="2">
+    <meta name="select:Contact Position" content="order-3" title="3">
+    <meta name="select:Contact Position" content="order-4" title="4">
+    <meta name="select:Contact Position" content="order-5" title="5">
+    <meta name="select:Contact Position" content="order-6" title="6">
+    <meta name="select:Contact Position" content="order-7" title="7">
+    <meta name="select:Newsletter Position" content="order-1" title="1">
+    <meta name="select:Newsletter Position" content="order-2" title="2">
+    <meta name="select:Newsletter Position" content="order-3" title="3">
+    <meta name="select:Newsletter Position" content="order-4" title="4">
+    <meta name="select:Newsletter Position" content="order-5" title="5">
+    <meta name="select:Newsletter Position" content="order-6" title="6">
+    <meta name="select:Newsletter Position" content="order-7" title="7">
+    <!-- Block Text Colors-->
+    <meta name="select:Branding Text Cover" content="text-white" title="White">
+    <meta name="select:Branding Text Cover" content="text-black" title="Black">
+    <meta name="select:Branding Text Page" content="text-white" title="White">
+    <meta name="select:Branding Text Page" content="text-black" title="Black">
+    <meta name="select:About Block Text" content="text-white" title="White">
+    <meta name="select:About Block Text" content="text-black" title="Black">
+    <meta name="select:Clients Block Text" content="text-black" title="Black">
+    <meta name="select:Clients Block Text" content="text-white" title="White">
+    <meta name="select:Contact Block Text" content="text-black" title="Black">
+    <meta name="select:Contact Block Text" content="text-white" title="White">
+    <meta name="select:Footer Text" content="text-white" title="White">
+    <meta name="select:Footer Text" content="text-black" title="Black">
+    <meta name="select:Hire Block Text" content="text-black" title="Black">
+    <meta name="select:Hire Block Text" content="text-white" title="White">
+    <meta name="select:Newsletter Block Text" content="text-white" title="White">
+    <meta name="select:Newsletter Block Text" content="text-black" title="Black">
+    <meta name="select:Notes Text" content="text-black" title="Black">
+    <meta name="select:Notes Text" content="text-white" title="White">
+    <meta name="select:Posts Text" content="text-black" title="Black">
+    <meta name="select:Posts Text" content="text-white" title="White">
+    <meta name="select:Sidebar Text" content="text-white" title="White">
+    <meta name="select:Sidebar Text" content="text-black" title="Black">
+    <meta name="select:Skills Block Text" content="text-black" title="Black">
+    <meta name="select:Skills Block Text" content="text-white" title="White">
+    <meta name="select:Showcase Block Text" content="text-black" title="Black">
+    <meta name="select:Showcase Block Text" content="text-white" title="White">
+    <meta name="select:Tags Nav Text" content="text-black" title="Black">
+    <meta name="select:Tags Nav Text" content="text-white" title="White">
+    <meta name="select:Testimonials Block Text" content="text-black" title="Black">
+    <meta name="select:Testimonials Block Text" content="text-white" title="White">
+    <meta name="select:Text Thumbnail Text" content="text-white" title="White">
+    <meta name="select:Text Thumbnail Text" content="text-black" title="Black">
+    <meta name="select:Chat Thumbnail Text" content="text-white" title="White">
+    <meta name="select:Chat Thumbnail Text" content="text-black" title="Black">
+    <meta name="select:Link Thumbnail Text" content="text-black" title="Black">
+    <meta name="select:Link Thumbnail Text" content="text-white" title="White">
+    <meta name="select:Quote Thumbnail Text" content="text-black" title="Black">
+    <meta name="select:Quote Thumbnail Text" content="text-white" title="White">
+    <meta name="select:Answer Thumbnail Text" content="text-white" title="White">
+    <meta name="select:Answer Thumbnail Text" content="text-black" title="Black">
+    <meta name="select:Audio Thumbnail Text" content="text-white" title="White">
+    <meta name="select:Audio Thumbnail Text" content="text-black" title="Black">
+    <meta name="select:Video Thumbnail Text" content="text-white" title="White">
+    <meta name="select:Video Thumbnail Text" content="text-black" title="Black">
+    <meta name="select:Thumbnail Mouseover Text" content="text-white" title="White">
+    <meta name="select:Thumbnail Mouseover Text" content="text-black" title="Black">
+    <!-- Sidebar - Tags-->
+    <meta name="if:Show Tag Menu" content="0">
+    <meta name="text:Tag Menu Title" content="Portfolio">
+    <meta name="text:Tag Menu List" content="">
+    <!-- Block: Hire-->
+    <meta name="if:Show Hire" content="0">
+    <meta name="text:Hire Text" content="Available for freelance work">
+    <meta name="text:Hire Button Text" content="Hire me">
+    <meta name="text:Hire Link" content="">
+    <!-- Block: About-->
+    <meta name="if:Show About" content="0">
+    <meta name="text:About Title" content="About">
+    <meta name="text:About Button Text" content="Hire me">
+    <meta name="text:About Button Link" content="">
+    <!-- Block: Showcase-->
+    <meta name="text:Showcase Title" content="Showcase">
+    <meta name="if:Show Thumbnail Post Type Icon" content="1">
+    <!-- Block: Skills-->
+    <meta name="if:Show Skills" content="0">
+    <meta name="text:Skills Title 1" content="Experience">
+    <meta name="text:Skills Text" content="Write your experience here, you can add some HTML elements, like headings, strong / bold and links.">
+    <meta name="text:Skills Title 2" content="Skills">
+    <meta name="text:Skills Area 1 Title" content="Photoshop">
+    <meta name="text:Skills Area 1 Percentage" content="80%">
+    <meta name="text:Skills Area 2 Title" content="Illustrator">
+    <meta name="text:Skills Area 2 Percentage" content="100%">
+    <meta name="text:Skills Area 3 Title" content="InDesign">
+    <meta name="text:Skills Area 3 Percentage" content="90%">
+    <meta name="text:Skills Area 4 Title" content="HTML/CSS">
+    <meta name="text:Skills Area 4 Percentage" content="60%">
+    <!-- Block: Testimonials-->
+    <meta name="if:Show Testimonials" content="0">
+    <meta name="text:Testimonials Title" content="Testimonials">
+    <meta name="text:Testimonial 1 Quote" content="">
+    <meta name="text:Testimonial 1 Author" content="">
+    <meta name="text:Testimonial 1 Company" content="">
+    <meta name="text:Testimonial 1 Link" content="">
+    <meta name="text:Testimonial 2 Quote" content="">
+    <meta name="text:Testimonial 2 Author" content="">
+    <meta name="text:Testimonial 2 Company" content="">
+    <meta name="text:Testimonial 2 Link" content="">
+    <!-- Block: Clients-->
+    <meta name="if:Show Clients" content="0">
+    <meta name="text:Clients Title" content="Clients">
+    <meta name="image:Client 1 Logo" content="">
+    <meta name="text:Client 1 Name" content="">
+    <meta name="text:Client 1 Link" content="">
+    <meta name="image:Client 2 Logo" content="">
+    <meta name="text:Client 2 Name" content="">
+    <meta name="text:Client 2 Link" content="">
+    <meta name="image:Client 3 Logo" content="">
+    <meta name="text:Client 3 Name" content="">
+    <meta name="text:Client 3 Link" content="">
+    <meta name="image:Client 4 Logo" content="">
+    <meta name="text:Client 4 Name" content="">
+    <meta name="text:Client 4 Link" content="">
+    <meta name="image:Client 5 Logo" content="">
+    <meta name="text:Client 5 Name" content="">
+    <meta name="text:Client 5 Link" content="">
+    <meta name="image:Client 6 Logo" content="">
+    <meta name="text:Client 6 Name" content="">
+    <meta name="text:Client 6 Link" content="">
+    <!-- Block: Newsletter-->
+    <meta name="if:Show Newsletter" content="0">
+    <meta name="text:Newsletter Title" content="Newsletter">
+    <meta name="text:Newsletter Text" content="Keep in touch with my most current work:">
+    <meta name="text:Newsletter Code" content="">
+    <!-- Meta-->
+    <meta name="if:Show Notes" content="1">
+    <meta name="if:Show Author" content="1">
+    <meta name="if:Show Tags" content="1">
+    <meta name="if:Show Date" content="1">
+    <!-- Sharing Options-->
+    <meta name="if:Share on Facebook" content="1">
+    <meta name="if:Share on Twitter" content="1">
+    <meta name="if:Share on Pinterest" content="1">
+    <meta name="if:Enable Reblog" content="1">
+    <meta name="if:Enable Like" content="1">
+    <!-- Search-->
+    <meta name="if:Show Search" content="1">
+    <!-- Widget: Instagram-->
+    <meta name="if:Show Widget Instagram" content="0">
+    <meta name="text:Widget Instagram Title" content="Instagram">
+    <meta name="text:Instagram User ID" content="">
+    <meta name="text:Instagram Access Token" content="">
+    <!-- Widget: Flickr-->
+    <meta name="if:Show Widget Flickr" content="0">
+    <meta name="text:Widget Flickr Title" content="Flickr">
+    <meta name="text:Flickr User ID" content="">
+    <!-- Widget: Dribbble-->
+    <meta name="if:Show Widget Dribbble" content="0">
+    <meta name="text:Widget Dribbble Title" content="Dribbble">
+    <meta name="text:Dribbble Username" content="">
+    <!-- Widget: Twitter-->
+    <meta name="if:Show Widget Twitter" content="0">
+    <meta name="text:Widget Twitter Title" content="Twitter">
+    <!-- Widget: Tumblr Likes-->
+    <meta name="if:Show Widget Likes" content="0">
+    <meta name="text:Widget Likes Title" content="Likes">
+    <!-- Widget: Tumblr Following-->
+    <meta name="if:Show Widget Following" content="0">
+    <meta name="text:Widget Following Title" content="Following">
+    <!-- Widget: Group Members-->
+    <meta name="if:Show Widget Group Members" content="0">
+    <meta name="text:Widget Group Members Title" content="Group Members">
+    <!-- Social Media-->
+    <meta name="text:Behance URL" content="">
+    <meta name="text:Dribbble URL" content="">
+    <meta name="text:Deviantart URL" content="">
+    <meta name="text:Facebook URL" content="">
+    <meta name="text:Flickr URL" content="">
+    <meta name="text:GooglePlus URL" content="">
+    <meta name="text:Instagram URL" content="">
+    <meta name="text:Linkedin URL" content="">
+    <meta name="text:Pinterest URL" content="">
+    <meta name="text:Tumblr URL" content="">
+    <meta name="text:Twitter URL" content="">
+    <meta name="text:Vimeo URL" content="">
+    <meta name="text:YouTube URL" content="">
+    <!-- Utilities-->
+    <meta name="if:Hide Tumblr Controls" content="0">
+    <meta name="text:Disqus Shortname" content="">
+    <meta name="text:Google Analytics ID" content="">
+    <meta name="text:Copyright" content="Copyright © 2015 Résumé Tumblr Theme. All rights reserved.">
+    <meta name="text:Header HTML Code" content="">
+    <meta name="text:Footer HTML Code" content="">{/block:Hidden}
+    <!-- Header Custom Code ////////////////////////////////////////////////////////////////////////////-->{text:Header HTML Code}
+  </head>
+  <body id="top" class="{block:IndexPage}is-index {block:Pagination}{block:PreviousPage}is-nothome {/block:PreviousPage}{/block:Pagination}{/block:IndexPage}{block:DayPage} is-nothome is-daypage {/block:DayPage}{block:PermalinkPage}is-page is-nothome {block:Posts}{block:Date}is-post {/block:Date}is-{PostType} {block:Audio}is-media {/block:Audio}{block:Video}is-media {/block:Video}{block:Photo}is-media {/block:Photo}{block:Photoset}is-photoset {block:Photoset}{block:RebloggedFrom}is-reblog {/block:RebloggedFrom}{block:NotReblog}is-notreblog {/block:NotReblog}{/block:Posts}{/block:PermalinkPage}{block:TagPage}is-tag is-nothome {/block:TagPage}{block:SearchPage}is-search is-nothome {/block:SearchPage} body-sidebar-right">
+    <div class="back-top square-box text-white"><a href="#top" class="vertical-align horizontal-align"><i class="fa fa-2x fa-caret-up"></i><span class="sr-only">Back to top</span></a></div>
+    <div class="wrapper">
+      <!-- Sidebar-->
+      <div id="sidebar" class="sidebar sidebar-right"><a href="#sidebar" class="sidebar-link">
+          <!--i.fa.fa-bars.icon-sidebar-open-->
+          <div class="sidebar-close square-box vertical-align horizontal-align text-white"><i class="fa fa-close fa-2x icon-sidebar-close"></i></div></a>
+        <div class="sidebar-contents text-center {select:Sidebar Text}">
+          <!-- Navigation-->
+          <nav>
+            <ul class="primary-navigation text-uppercase">
+              <li class="nav h5"><a href="/" title="{lang:Home}">{lang:Home}</a></li>{block:IfShowTagMenu}
+              {block:IfTagMenuList}
+              <li class="nav subnav dropdown"><a id="dLabel" data-target="#" href="/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="tags-title h5 dropdown-toggle">{text:Tag Menu Title}<i class="fa fa-caret-down tags-arrow-down"></i></a>
+                <script>
+                  var list = '{text:Tag Menu List}';
+                  list = list.split(',');
+                  var html = '<ul class="nav-tagslist island-half dropdown-menu {select:Tags Nav Text} list-unstyled hf" aria-labelledby="dLabel">';
+                  for (var i = 0; i < list.length; i++) {
+                      html += '<li><a class="nav-tag text-lowercase small" tabindex="-1" href="/tagged/' + list[i] + '">#' + list[i] + '</a></li>';
+                  }
+                  html += '</ul>';
+                  document.write(html);
+                  
+                </script>
+              </li>{/block:IfTagMenuList}
+              {/block:IfShowTagMenu}
+              {block:HasPages}
+              {block:Pages}
+              <li class="nav h5"><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}
+              {/block:HasPages}
+              {block:AskEnabled}
+              <li class="nav h5"><a href="/ask" title="{AskLabel}">{AskLabel}</a></li>{/block:AskEnabled}
+              {block:SubmissionsEnabled}
+              <li class="nav h5"><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}{block:IfShowSearch}
+              <li class="nav nav-search h5">
+                <div class="sr-only">{lang:Search}</div>
+                <form action="/search" method="get" class="search-form">
+                  <input type="text" name="q" value="" class="search-field">
+                  <input type="submit" value="&amp;#xf002;" class="btn h6 search-button fa {select:Buttons Style}"><i class="fa fa-search search-icon"></i>
+                </form>
+              </li>{/block:IfShowSearch}
+            </ul>
+          </nav>
+          <!-- Widgets-->{block:IfShowWidgetDribbble}
+          <div class="widget widget-dribbble">
+            <h5 class="widget-title">{text:Widget Dribbble Title}</h5>{block:IfDribbbleUsername}
+            <div id="dribbble-shots" class="mini-thumbs"></div>{/block:IfDribbbleUsername}
+            {block:IfNotDribbbleUsername}
+            <p>Please enter your Dribbble Username in the Customizer (or disable the Dribbble Widget).</p>{/block:IfNotDribbbleUsername}
+          </div>{/block:IfShowWidgetDribbble}{block:IfShowWidgetFlickr}
+          <div class="widget widget-flickr">
+            <h5 class="widget-title">{text:Widget Flickr Title}</h5>{block:IfFlickrUserID}
+            <div id="flickr" class="mini-thumbs"></div>{/block:IfFlickrUserID}
+            {block:IfNotFlickrUserID}
+            <p>Please enter your Flickr User ID in the Customizer (or disable the Flickr Widget). You can get your Flickr ID here:<a href="https://idgettr.com/" target="_blank">https://idgettr.com/</a></p>{/block:IfNotFlickrUserID}
+          </div>{/block:IfShowWidgetFlickr}{block:IfShowWidgetInstagram}
+          <div class="widget widget-instagram">
+            <h5 class="widget-title">{text:Widget Instagram Title}</h5>{block:IfInstagramUserID}
+            <div id="instagram" class="mini-thumbs"></div>{/block:IfInstagramUserID}
+            {block:IfNotInstagramUserID}
+            <p>Please enter your Instagram User ID in the Customizer (or disable the Instagram Widget). You can get your Instagram User ID here:<a href="https://themelantic.zendesk.com/hc/en-us/articles/204249961-How-do-I-add-an-Instagram-widget-to-my-theme-" target="_blank">https://on.misspato.com/instagram-setup</a></p>{/block:IfNotInstagramUserID}
+            {block:IfNotInstagramAccessToken}
+            <p>Please enter your Instagram Access Token in the Customizer (or disable the Instagram Widget). You can get your Instagram Access Token here:<a href="https://themelantic.zendesk.com/hc/en-us/articles/204249961-How-do-I-add-an-Instagram-widget-to-my-theme-" target="_blank">https://on.misspato.com/instagram-setup</a></p>{/block:IfNotInstagramAccessToken}
+          </div>{/block:IfShowWidgetInstagram}
+          {block:IfShowWidgetTwitter}
+          {TwitterUsername}
+          <div class="widget widget-twitter">
+            <h5 class="widget-title">{text:Widget Twitter Title}</h5>{block:Twitter}
+            <div id="twitter" style="display:none" class="tweet alt">
+              <div id="tweets" class="t6"></div>
+            </div>
+            <!--a.btn(href="https://twitter.com/intent/follow?screen_name={TwitterUsername}", title="{lang:Follow on Twitter}") {lang:Follow on Twitter}-->
+            <script>
+              function recent_tweets(data) {
+              var amount = 1;
+              for (i = 0; i < amount; i++) {
+                  document.getElementById("tweets").innerHTML =
+                      document.getElementById("tweets").innerHTML +
+                  '<p class="tweet"><a href="https://twitter.com/{TwitterUsername}/status/' +
+                  (data[i].id_str ? data[i].id_str : data[i].id) +
+                  '">' + data[i].text + '</a>' +
+                  '<span class="timeago hf micro muted" title="' + data[i].created_at + '"></span>'
+                  '</p>';
+                  }
+                  document.getElementById("twitter").style.display = 'block';
+              }
+            </script>{/block:Twitter}
+            {block:IfNotTwitter}
+            <p>Please enable your Twitter account in the Tumblr Settings (or disable the Twitter Widget).<a href="https://www.tumblr.com/settings/blog/" target="_blank">https://www.tumblr.com/settings/blog/</a></p>{/block:IfNotTwitter}
+          </div>{/block:IfShowWidgetTwitter}
+          {block:IfShowWidgetGroupMembers}
+          {block:GroupMembers}
+          <div class="widget widget-group">
+            <h5 class="widget-title">{text:Widget Group Members Title}</h5>
+            <div class="mini-thumbs">{block:GroupMember}<a href="{GroupMemberURL}" target="_blank" title="{GroupMemberName}"><img src="{GroupMemberPortraitURL-128}" alt="{GroupMemberName} ({GroupMemberTitle})" class="mini-thumb"></a>{/block:GroupMember}</div>
+          </div>{/block:GroupMembers}
+          {/block:IfShowWidgetGroupMembers}
+          {block:IfShowWidgetFollowing}
+          {block:Following}
+          <div class="widget widget-following">
+            <h5 class="widget-title">{text:Widget Following Title}</h5>
+            <div class="mini-thumbs">{block:Followed}<a href="{FollowedURL}" target="_blank" title="{FollowedName}"><img src="{FollowedPortraitURL-128}" alt="{FollowedName}" class="mini-thumb"></a>{/block:Followed}</div>
+          </div>{/block:Following}
+          {/block:IfShowWidgetFollowing}
+          {block:IfShowWidgetLikes}
+          {block:Likes}
+          <div class="widget widget-likes">
+            <h5 class="widget-title">{text:Widget Likes Title}</h5>
+            <div class="likes-list t6">{Likes limit="5" summarize="100" width="180"}</div>
+          </div>{/block:Likes}
+          {/block:IfShowWidgetLikes}
+        </div>
+      </div>
+      <div class="wrapper-content">
+        <!-- Header-->
+        <header class="site-header">
+          <div class="brand-container">
+            <div class="container">
+              <div class="row">
+                <div class="brand col-xs-12 col-sm-6 col-md-4 island text-center {select:Branding Align} hp-{select:Branding Text Cover} cp-{select:Branding Text Page}">
+                  <!-- Logo & Tagline-->
+                  <div class="site-logo {block:IfLogoPageImage}logo-with-image{/block:IfLogoPageImage}{block:IfNotLogoPageImage}logo-without-image{/block:IfNotLogoPageImage}"><a href="/" title="{Title}" class="logo">{block:IfLogoCoverImage}<img src="{image:Logo Cover}" alt="{Title}" class="logo-img">{/block:IfLogoCoverImage}
+                      {block:IfLogoPageImage}<img src="{image:Logo Page}" alt="{Title}" class="logopage-img">{/block:IfLogoPageImage}
+                      <h1 class="h1 nomargin logo-text {block:IfNotShowBlogTitle}sr-only{/block:IfNotShowBlogTitle}">{Title}</h1>{block:IfTagline}
+                      <h2 class="h6 nomargin logo-tagline text-normal island-quarter muted">{text:Tagline}</h2>{/block:IfTagline}</a></div>
+                  <!-- Social Media-->
+                  <div class="widget-socialmedia round-icons pad-top hidden-xs">{block:IfShowSocialMediaIcons}
+                    <ul class="social-icons list-inline">{block:IfBehanceURL}
+                      <li><a href="{text:Behance URL}"><i class="fa fa-behance icon"></i><span class="sr-only">Behance</span></a></li>{/block:IfBehanceURL}
+                      {block:IfDribbbleURL}
+                      <li><a href="{text:Dribbble URL}"><i class="fa fa-dribbble icon"></i><span class="sr-only">Dribbble</span></a></li>{/block:IfDribbbleURL}
+                      {block:IfDeviantartURL}
+                      <li><a href="{text:Deviantart URL}"><i class="fa fa-deviantart icon"></i><span class="sr-only">Deviantart</span></a></li>{/block:IfDeviantartURL}
+                      {block:IfFacebookURL}
+                      <li><a href="{text:Facebook URL}"><i class="fa fa-facebook icon"></i><span class="sr-only">Facebook</span></a></li>{/block:IfFacebookURL}
+                      {block:IfFlickrURL}
+                      <li><a href="{text:Flickr URL}"><i class="fa fa-flickr icon"></i><span class="sr-only">Flickr</span></a></li>{/block:IfFlickrURL}
+                      {block:IfGooglePlusURL}
+                      <li><a href="{text:GooglePlus URL}"><i class="fa fa-google-plus icon"></i><span class="sr-only">Google+</span></a></li>{/block:IfGooglePlusURL}
+                      {block:IfInstagramURL}
+                      <li><a href="{text:Instagram URL}"><i class="fa fa-instagram icon"></i><span class="sr-only">Instagram</span></a></li>{/block:IfInstagramURL}
+                      {block:IfLinkedinURL}
+                      <li><a href="{text:Linkedin URL}"><i class="fa fa-linkedin icon"></i><span class="sr-only">Linkedin</span></a></li>{/block:IfLinkedinURL}
+                      {block:IfPinterestURL}
+                      <li><a href="{text:Pinterest URL}"><i class="fa fa-pinterest-p icon"></i><span class="sr-only">Pinterest</span></a></li>{/block:IfPinterestURL}
+                      {block:IfTumblrURL}
+                      <li><a href="{text:Tumblr URL}"><i class="fa fa-tumblr icon"></i><span class="sr-only">Tumblr</span></a></li>{/block:IfTumblrURL}
+                      {block:IfTwitterURL}
+                      <li><a href="{text:Twitter URL}"><i class="fa fa-twitter icon"></i><span class="sr-only">Twitter</span></a></li>{/block:IfTwitterURL}
+                      {block:IfVimeoURL}
+                      <li><a href="{text:Vimeo URL}"><i class="fa fa-vimeo icon"></i><span class="sr-only">Vimeo</span></a></li>{/block:IfVimeoURL}
+                      {block:IfYouTubeURL}
+                      <li><a href="{text:YouTube URL}"><i class="fa fa-youtube icon"></i><span class="sr-only">YouTube</span></a></li>{/block:IfYouTubeURL}
+                    </ul>{/block:IfShowSocialMediaIcons}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>{block:Indexpage}
+          <div class="cover"></div>{/block:Indexpage}
+          <div class="topbar">
+            <div class="container">
+              <div class="row">
+                <div class="topbar-container topbar-left {block:IfShowHire}{select:Hire Block Text}{/block:IfShowHire}">{block:IfShowHire}
+                  <!-- Hire Block-->
+                  <div class="hire-box hire-large hidden-xs">
+                    <div class="hire-text pull-left h5">{text:Hire Text}</div>
+                    <div class="hire-button pull-right"><a href="{text:Hire Link}" class="btn btn-outline h5 {select:Buttons Style}">{text:Hire Button Text}</a></div>
+                  </div>
+                  <div class="hire-box hire-small visible-xs-block"><a href="{text:Hire Link}">
+                      <div class="hire-box square-box pull-right text-center"><i class="fa fa-check fa-2x"></i>
+                        <p class="micro hf">{text:Hire Button Text}</p>
+                      </div></a></div>{/block:IfShowHire}
+                </div>
+                <!-- Navigation (Link)-->
+                <div class="topbar-container topbar-right"><a href="#sidebar" class="sidebar-link">
+                    <div class="sidebar-open square-box vertical-align horizontal-align text-white"><i class="fa fa-bars fa-2x icon-sidebar-open"><span class="sr-only">{lang:Navigate}</span></i></div></a></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="wrapper-blocks">{block:IndexPage}
+          <!-- About-->{block:IfShowAbout}
+          <div class="block-about col-xs-12 hp-only {select:About Block Text} {select:About Position}">
+            <div class="container pad-top-triple pad-bottom-triple">
+              <div class="hp-block">
+                <div class="row row-flex-stretch">
+                  <div class="about-longtext col-xs-12 pad-bottom col-sm-6 col-md-7">
+                    <h2 class="block-title text-left">{text:About Title}</h2>{block:Description}
+                    <div class="post-text">{Description}</div>{/block:Description}
+                  </div>
+                  <div class="about-cta col-xs-12 pad-bottom col-sm-6 col-md-4 col-md-offset-1 vertical-align horizontal-align"><a href="{text:About Button Link}" class="btn btn-accent btn-large hf h3 {select:Buttons Style}">{text:About Button Text}</a></div>
+                </div>
+              </div>
+            </div>
+          </div>{/block:IfShowAbout}
+          <!-- Skills-->{block:IfShowSkills}
+          <div class="block-skills col-xs-12 hp-only {select:Skills Block Text} {select:Skills Position}">
+            <div class="container pad-top-triple pad-bottom-triple">
+              <div class="hp-block">
+                <div class="row">
+                  <div class="skill-longtext col-sm-6 col-md-7 pad-bottom">
+                    <h2 class="block-title text-left">{text:Skills Title 1}</h2>
+                    <div class="post-text">{text:Skills Text}</div>
+                  </div>
+                  <div class="skill-stats col-sm-6 col-md-4 col-md-offset-1 pad-bottom">
+                    <h2 class="block-title text-left">{text:Skills Title 2}</h2>
+                    <div class="skill-1 skill-single">
+                      <div class="skill-name-percentage clearfix">
+                        <h5 class="skill-area pull-left">{text:Skills Area 1 Title}</h5><span class="h5 skill-percentage-number pull-right">{text:Skills Area 1 Percentage}</span>
+                      </div>
+                      <div class="percentage">
+                        <div style="width: {text:Skills Area 1 Percentage}" class="skill-percentage"></div>
+                      </div>
+                    </div>
+                    <div class="skill-2 skill-single">
+                      <div class="skill-name-percentage clearfix">
+                        <h5 class="skill-area pull-left">{text:Skills Area 2 Title}</h5><span class="h5 skill-percentage-number pull-right">{text:Skills Area 2 Percentage}</span>
+                      </div>
+                      <div class="percentage">
+                        <div style="width: {text:Skills Area 2 Percentage}" class="skill-percentage"></div>
+                      </div>
+                    </div>
+                    <div class="skill-3 skill-single">
+                      <div class="skill-name-percentage clearfix">
+                        <h5 class="skill-area pull-left">{text:Skills Area 3 Title}</h5><span class="h5 skill-percentage-number pull-right">{text:Skills Area 3 Percentage}</span>
+                      </div>
+                      <div class="percentage">
+                        <div style="width: {text:Skills Area 3 Percentage}" class="skill-percentage"></div>
+                      </div>
+                    </div>
+                    <div class="skill-4 skill-single">
+                      <div class="skill-name-percentage clearfix">
+                        <h5 class="skill-area pull-left">{text:Skills Area 4 Title}</h5><span class="h5 skill-percentage-number pull-right">{text:Skills Area 4 Percentage}</span>
+                      </div>
+                      <div class="percentage">
+                        <div style="width: {text:Skills Area 4 Percentage}" class="skill-percentage"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>{/block:IfShowSkills}
+          <!-- Showcase-->
+          <!-- IndexPage /////////////////////////////////////////////////////////////////////////////////////-->
+          <div class="block-showcase col-xs-12 {select:Showcase Position}">
+            <div class="container pad-top-triple pad-bottom-triple">
+              <div class="hp-block row">
+                <!-- Thumbnails Title-->
+                <div class="showcase-title {select:Showcase Block Text}">
+                  <h2 class="block-title col-xs-12">
+                    <div class="span hp-only">{text:Showcase Title}</div>{block:TagPage}{lang:Posts tagged Tag 2}{/block:TagPage}
+                    {block:DayPage}{Month} {DayOfMonth}, {Year}{/block:DayPage}
+                    {block:SearchPage}{block:NoSearchResults}{lang:Sorry no results for SearchQuery 2}{/block:NoSearchResults}{lang:SearchResultCount results for SearchQuery 2}{/block:SearchPage}
+                  </h2>
+                </div>
+                <!-- Thumbnails-->
+                <ul class="thumbs list-unstyled list-thumbs pad-top pad-bottom">{block:Posts}
+                  <li id="{PostID}" class="thumb thumbtype-{PostType} {block:Photoset}thumbtype-photoset{/block:Photoset}">
+                    <div class="thumbnail-wrap thumbnail-wrap-{PostType}"><a href="{Permalink}" class="thumbnail-link">
+                        <article class="thumbnail-content">{block:Photo}
+                          <div style="background: transparent url({PhotoURL-1280}) no-repeat top center; background-size: cover" class="thumb-img thumbnail-content"></div>{/block:Photo}
+                          {block:Photoset}
+                          {block:Photos}
+                          <div style="background: transparent url({PhotoURL-1280}) no-repeat top center; background-size: cover" class="thumb-img thumbnail-content"></div>{/block:Photos}
+                          {/block:Photoset}{block:Panorama}
+                          <div style="background: transparent url({PhotoURL-Panorama}) no-repeat top center; background-size: cover" class="thumb-img thumbnail-content"></div>{/block:Panorama}{block:Video}
+                          <div class="thumb-caption-media thumbnail-content vertical-align horizontal-align island {select:Audio Thumbnail Text}">{block:IfShowThumbnailPostTypeIcon}
+                            <div class="thumb-iconbox vertical-align horizontal-align"><i class="fa muted fa-youtube-play"><span class="sr-only">{PostType}</span></i></div>{/block:IfShowThumbnailPostTypeIcon}
+                          </div>{block:VideoThumbnail}
+                          <div style="background: transparent url({VideoThumbnailURL}) no-repeat top center; background-size: cover" class="thumb-img thumbnail-content"></div>{/block:VideoThumbnail}
+                          {/block:Video}{block:Audio}
+                          <div class="thumb-caption-media thumbnail-content vertical-align horizontal-align island {select:Audio Thumbnail Text}">{block:IfShowThumbnailPostTypeIcon}
+                            <div class="thumb-iconbox vertical-align horizontal-align"><i class="fa muted fa-music"><span class="sr-only">{PostType}</span></i></div>{/block:IfShowThumbnailPostTypeIcon}
+                          </div>{block:AudioEmbed}
+                          <div class="thumb-audioembed thumbnail-content">{AudioEmbed-400}</div>{/block:AudioEmbed}
+                          {block:AlbumArt}
+                          <div style="background: transparent url({AlbumArtURL}) no-repeat top center; background-size: cover" class="thumb-img thumbnail-content"></div>{/block:AlbumArt}
+                          {/block:Audio}
+                          {block:Text}
+                          {block:Title}
+                          <div class="thumb-caption thumbnail-content text-center island {select:Text Thumbnail Text}">{block:IfShowThumbnailPostTypeIcon}<i class="fa muted fa-newspaper-o"><span class="sr-only">{PostType}</span></i>{/block:IfShowThumbnailPostTypeIcon}
+                            <h4 class="trimtext">{Title}</h4>
+                          </div>{/block:Title}
+                          {/block:Text}{block:Chat}
+                          <div class="thumb-caption thumbnail-content text-center island {select:Chat Thumbnail Text}">{block:IfShowThumbnailPostTypeIcon}<i class="fa muted fa-comment-o"><span class="sr-only">{PostType}</span></i>{/block:IfShowThumbnailPostTypeIcon}
+                            <h4 class="trimtext">{Title}</h4>
+                          </div>{/block:Chat}{block:Answer}
+                          <div class="thumb-caption thumbnail-content text-center island {select:Answer Thumbnail Text}">{block:IfShowThumbnailPostTypeIcon}<i class="fa muted fa-question-circle"><span class="sr-only">{PostType}</span></i>{/block:IfShowThumbnailPostTypeIcon}
+                            <h4 class="trimtext">{PlaintextQuestion}</h4>
+                            <div class="thumb-asker micro hf muted">{lang:Asked by Asker}</div>
+                          </div>{/block:Answer}{block:Quote}
+                          <div class="thumb-caption thumbnail-content text-center island {select:Quote Thumbnail Text}">{block:IfShowThumbnailPostTypeIcon}<i class="fa muted fa-quote-left"><span class="sr-only">{PostType}</span></i>{/block:IfShowThumbnailPostTypeIcon}
+                            <div class="thumb-quote">
+                              <h4 class="trimtext">{PlaintextQuote}</h4>{block:Source}
+                              <div class="thumb-quote-source micro hf muted">{PlaintextSource}</div>{/block:Source}
+                            </div>
+                          </div>{/block:Quote}{block:Link}
+                          <div class="thumb-caption thumbnail-content text-center island {select:Link Thumbnail Text}">{block:IfShowThumbnailPostTypeIcon}<i class="fa muted fa-link"><span class="sr-only">{PostType}</span></i>{/block:IfShowThumbnailPostTypeIcon}
+                            <h4 class="trimtext">{PlaintextName}</h4>
+                          </div>{/block:Link}
+                        </article></a>
+                      <!-- Thumbnail Hover-->
+                      <div class="thumbnail-hover {select:Thumbnail Mouseover Text}"><a href="{Permalink}" class="thumbnail-link"></a>
+                        <div class="thumb-icons {block:NoteCount}thumb-withlikes{/block:NoteCount}">
+
+                        </div>{block:NoteCount}
+                        <div class="thumb-likes text-center micro hf muted">{NoteCount} {lang:Likes}</div>{/block:NoteCount}
+                      </div>
+                    </div>
+                  </li>{/block:Posts}
+                </ul>
+              </div>
+              <div class="row">{block:Pagination}
+                <!-- Pagination-->
+                <div class="site-pagination text-center">{block:PreviousPage}<a href="{PreviousPage}" title="{lang:Previous}" class="pagination-previous muted"><i class="fa fa-caret-left">
+                      <div class="sr-only">{lang:Previous}</div></i></a>{/block:PreviousPage}
+                  {block:JumpPagination length="5"}
+                  {block:CurrentPage}<span class="page-number current h5">{PageNumber}</span>{/block:CurrentPage}
+                  {block:JumpPage}<a href="{URL}" class="page-number h5">{PageNumber}</a>{/block:JumpPage}
+                  {/block:JumpPagination}
+                  {block:NextPage}<a href="{NextPage}" title="{lang:Next}" class="pagination-next muted"><i class="fa fa-caret-right">
+                      <div class="sr-only">{lang:Next}</div></i></a>{/block:NextPage}
+                </div>{/block:Pagination}
+                {block:DayPagination}
+                <!-- Day Pagination-->
+                <div class="site-pagination text-center">{block:PreviousDayPage}<a href="{PreviousDayPage}" title="{lang:Previous}" class="pagination-previous muted"><i class="fa fa-caret-left">
+                      <div class="h6 inline">{ShortMonth} {DayOfMonth}</div></i></a>{/block:PreviousDayPage}
+                  {block:NextDayPage}<a href="{NextDayPage}" title="{lang:Next}" class="pagination-next"><i class="fa fa-caret-right">
+                      <div class="h6 inline">{ShortMonth} {DayOfMonth}</div></i></a>{/block:NextDayPage}
+                </div>{/block:DayPagination}
+              </div>
+            </div>
+          </div>
+          <!-- Testimonials-->{block:IfShowTestimonials}
+          <div class="block-testimonials col-xs-12 hp-only {select:Testimonials Block Text} {select:Testimonials Position}">
+            <div class="container pad-top-triple pad-bottom-triple">
+              <div class="hp-block">
+                <h2 class="block-title">{text:Testimonials Title}</h2>
+                <div class="row">
+                  <div class="testimonial-single col-sm-6">
+                    <blockquote class="testimonial-text island">{text:Testimonial 1 Quote}</blockquote>
+                    <div class="testimonial-author h4 text-center">{text:Testimonial 1 Author}</div>
+                    <div class="testimonial-company micro hf muted text-center">{block:IfTestimonial1Link}<a href="{text:Testimonial 1 Link}" target="_blank">{/block:IfTestimonial1Link}{text:Testimonial 1 Company}{block:IfTestimonial1Link}</a>{/block:IfTestimonial1Link}</div>
+                  </div>
+                  <div class="testimonial-single col-sm-6">
+                    <blockquote class="testimonial-text island">{text:Testimonial 2 Quote}</blockquote>
+                    <div class="testimonial-author h4 text-center">{text:Testimonial 2 Author}</div>
+                    <div class="testimonial-company micro hf muted text-center">{block:IfTestimonial2Link}<a href="{text:Testimonial 2 Link}" target="_blank">{/block:IfTestimonial2Link}{text:Testimonial 2 Company}{block:IfTestimonial2Link}</a>{/block:IfTestimonial2Link}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>{/block:IfShowTestimonials}
+          <!-- Clients-->{block:IfShowClients}
+          <div class="block-clients col-xs-12 hp-only {select:Clients Block Text} {select:Clients Position}">
+            <div class="container pad-top-triple pad-bottom-triple">
+              <div class="hp-block">
+                <h2 class="block-title">{text:Clients Title}</h2>
+                <div class="row">
+                  <ul class="client-list list-inline text-center pipe-list">
+                    <li class="client-single col-xs-6 col-sm-4 col-lg-2 vertical-align horizontal-align island">{block:IfClient1Link}<a href="{text:Client 1 Link}" target="_blank">{/block:IfClient1Link}<img src="{image:Client 1 Logo}" alt="{text:Client 1 Name}" class="client-logo #dcecf5">{block:IfClient1Link}</a>{/block:IfClient1Link}</li>
+                    <li class="client-single col-xs-6 col-sm-4 col-lg-2 vertical-align horizontal-align island">{block:IfClient2Link}<a href="{text:Client 2 Link}" target="_blank">{/block:IfClient2Link}<img src="{image:Client 2 Logo}" alt="{text:Client 2 Name}" class="client-logo #dcecf5">{block:IfClient2Link}</a>{/block:IfClient2Link}</li>
+                    <li class="client-single col-xs-6 col-sm-4 col-lg-2 vertical-align horizontal-align island">{block:IfClient3Link}<a href="{text:Client 3 Link}" target="_blank">{/block:IfClient3Link}<img src="{image:Client 3 Logo}" alt="{text:Client 3 Name}" class="client-logo #dcecf5">{block:IfClient3Link}</a>{/block:IfClient3Link}</li>
+                    <li class="client-single col-xs-6 col-sm-4 col-lg-2 vertical-align horizontal-align island">{block:IfClient4Link}<a href="{text:Client 4 Link}" target="_blank">{/block:IfClient4Link}<img src="{image:Client 4 Logo}" alt="{text:Client 4 Name}" class="client-logo #dcecf5">{block:IfClient4Link}</a>{/block:IfClient4Link}</li>
+                    <li class="client-single col-xs-6 col-sm-4 col-lg-2 vertical-align horizontal-align island">{block:IfClient5Link}<a href="{text:Client 5 Link}" target="_blank">{/block:IfClient5Link}<img src="{image:Client 5 Logo}" alt="{text:Client 5 Name}" class="client-logo #dcecf5">{block:IfClient5Link}</a>{/block:IfClient5Link}</li>
+                    <li class="client-single col-xs-6 col-sm-4 col-lg-2 vertical-align horizontal-align island">{block:IfClient6Link}<a href="{text:Client 6 Link}" target="_blank">{/block:IfClient6Link}<img src="{image:Client 6 Logo}" alt="{text:Client 6 Name}" class="client-logo #dcecf5">{block:IfClient6Link}</a>{/block:IfClient6Link}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>{/block:IfShowClients}
+          <!-- Contact-->{block:IfShowContact}
+          <div class="block-contact col-xs-12 hp-only {select:Contact Block Text} {select:Contact Position}">
+            <div class="container pad-top-triple pad-bottom-triple">
+              <div class="hp-block">
+                <h2 class="block-title">{text:Contact Title}</h2>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="post-text pad-bottom">{text:Contact Text}</div>
+                  </div>
+                  <div class="col-lg-7 col-lg-offset-1">
+                    <div class="contact-form">
+                      <iframe id="ask_form" frameborder="0" height="190" scrolling="no" src="https://www.tumblr.com/ask_form/" width="100%" style="background-color: transparent; overflow: hidden;"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>{/block:IfShowContact}
+          <!-- Newsletter-->{block:IfShowNewsletter}
+          <div class="block-newsletter col-xs-12 {select:Newsletter Block Text} {select:Newsletter Position}">
+            <div class="container island-triple text-center">
+              <div class="widget widget-newsletter nomargin">
+                <h2 class="block-title nomargin">{text:Newsletter Title}</h2>
+                <p class="block-text muted">{text:Newsletter Text}</p>{text:Newsletter Code}
+                {block:IfNotNewsletterCode}
+                <p>Please enter your Mailchimp code in the Customizer > Newsletter Code (or disable the Newsletter Widget and/or Block).</p>{/block:IfNotNewsletterCode}
+              </div>
+            </div>
+          </div>{/block:IfShowNewsletter}{/block:IndexPage}
+          {block:PermalinkPage}
+          <!-- Permalinkpage-->
+          <!-- PermalinkPage //////////////////////////////////////////////////////////////////////////////////////-->{block:Posts}
+          <div class="main container col-xs-12 pad-top pad-bottom-triple">
+            <article class="page-article article {select:Posts Text} {block:photo}post-media {/block:photo}{block:photoset}post-media {/block:photoset}{block:Panorama}post-media {/block:Panorama}{block:Video}post-media {/block:Video}{block:Audio}post-media {/block:Audio}">
+              <!-- Header-->
+              <div class="row">
+                <header class="article-header col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-bottom">{block:Title}
+                  <h2 class="post-title text-center">{Title}</h2>{block:Title}
+                  {block:Link}
+                  <h2 class="post-title text-center">{Name}</h2>{/block:Link}
+                  {block:Answer}
+                  <h2 class="post-title text-center">{Question}</h2>
+                  <h5 class="muted text-center">{lang:Asked by Asker 2}</h5>{/block:Answer}
+                  {block:Audio}
+                  {block:TrackName}
+                  <h2 class="post-title text-center">{TrackName}</h2>{/block:TrackName}
+                  {block:Artist}
+                  <h5 class="muted text-center">{Artist}</h5>{/block:Artist}
+                  {/block:Audio}
+                </header>
+              </div>
+              <!-- Media Content-->
+              <div class="row">
+                <div class="post-media-content col-xs-12 col-lg-10 col-lg-offset-1">{block:Photo}
+                  {LinkOpenTag}<img src="{PhotoURL-1280}" width="{PhotoWidth-1280}" alt="{PhotoAlt}" class="post-media img-responsive">{LinkCloseTag}
+                  {/block:Photo}{block:Photoset}
+                  <div class="text-center pad-bottom">{Photoset}</div>{/block:Photoset}{block:Panorama}
+                  {LinkOpenTag}<img src="{PhotoURL-Panorama}" width="{PhotoWidth-Panorama}" alt="{PhotoAlt}" class="post-media img-responsive">{LinkCloseTag}
+                  {/block:Panorama}
+                  {block:Audio}
+                  {block:AudioEmbed}
+                  <div class="audio-embed pad-bottom">{AudioEmbed-640}</div>{/block:AudioEmbed}
+                  {block:AudioPlayer}
+                  <div class="audio-player pad-bottom">{block:AlbumArt}<img src="{AlbumArtURL}" class="audio-cover post-media pad-bottom img-responsive">{/block:AlbumArt}
+                    <div class="player-box pad-top">
+                      <div class="player-button">{AudioPlayer}</div>
+                    </div>
+                  </div>{/block:AudioPlayer}
+                  {/block:Audio}{block:Video}
+                  <div class="tmblr-embed pad-bottom">{Video-500}</div>{/block:Video}
+                </div>
+              </div>
+              <!-- Share-->
+              <div class="row">
+                <div class="article-share col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-bottom">{block:Date}
+                  <div class="page-share text-center island">
+                    <div class="page-share-title micro hf">*Click On Image*</div>
+                    <div class="share-sites vertical-align horizontal-align island-half">{block:IfShareonTwitter}<a href="https://twitter.com/share?text={Title}&amp;url={Permalink}" title="Share on Twitter"><i class="fa fa-twitter icon share-btn"></i><span class="sr-only">Twitter</span></a>{/block:IfShareonTwitter}{block:IfShareonFacebook}<a href="https://www.facebook.com/sharer.php?u={Permalink}" title="Share on Facebook"><i class="fa fa-facebook icon share-btn"></i><span class="sr-only">{lang:Facebook}</span></a>{/block:IfShareonFacebook}{block:IfShareonPinterest}<a href="https://pinterest.com/pin/create/button/?url={Permalink}&amp;amp;media={PhotoURL-1280}&amp;amp;description={PlaintextCaption}" title="Share on Pinterest"><i class="fa fa-pinterest-p icon share-btn"></i><span class="sr-only">{lang:Pinterest}</span></a>{/block:IfShareonPinterest}{block:IfEnableReblog}
+                      <div class="btn-reblog share-btn vertical-align horizontal-align">{ReblogButton color="white" size="16"}</div>{/block:IfEnableReblog}{block:IfEnableLike}
+                      <div class="btn-like share-btn vertical-align horizontal-align">{LikeButton color="white" size="16"}</div>{/block:IfEnableLike}
+                    </div>
+                  </div>{/block:Date}
+                </div>
+              </div>
+              <!-- Text Content-->
+              <div class="row">
+                <div class="post-content col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                  <div class="post-text pad-bottom-double">{Body}</div>{block:Chat}
+                  <ul class="chat-body post-text list-unstyled pad-bottom-double">{block:Lines}
+                    <li class="chat-line pad-top pad-bottom chat-line-{Alt}">{block:Label}<span class="h5">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}
+                  </ul>{/block:Chat}{block:Quote}
+                  <blockquote class="post-text post-quote pad-bottom-double">{Quote}</blockquote>
+                  <cite class="quote-source h6 muted">{Source}</cite>{/block:Quote}{block:Link}
+                  {block:Thumbnail}<img src="{Thumbnail}" alt="{Name}" class="post-media img-responsive">{/block:Thumbnail}
+                  <div class="post-text">{block:Description}{Description}{/block:Description}
+                    <div class="text-center pad-bottom-double"><a href="{URL}" {target} class="btn btn-large btn-solid link-url {select:Buttons Style}">{lang:Link}</a></div>
+                  </div>{/block:Link}{block:Answer}
+                  <div class="post-answer post-text pad-bottom">{Answer}</div>{/block:Answer}{block:Caption}
+                  <div class="post-media-caption post-text pad-top pad-bottom-double">{Caption}</div>{/block:Caption}
+                  <!-- Meta-->{block:Date}
+                  <div class="post-meta island text-center">
+                    <div class="micro hf text-normal muted">{block:IfShowAuthor}<a href="{PostAuthorURL}" target="_blank">{lang:Posted by PostAuthorName 2}</a> .
+                      {/block:IfShowAuthor}
+                      {block:IfShowDate}<a href="/{Year}/{MonthNumber}/{DayOfMonth}">{DayOfMonth} {ShortMonth} {Year}</a>{/block:IfShowDate}
+                    </div>
+                  </div>{/block:Date}
+                  <!-- Tags-->
+                  {block:Date}
+                  {block:IfShowTags}
+                  {block:HasTags}
+                  <ul class="post-tags list-inline text-center island">{block:Tags}
+                    <li><a href="{TagURL}" title="{Tag}" class="tag-link micro text-normal hf muted">{Tag}</a></li>{/block:Tags}
+                  </ul>{/block:HasTags}
+                  {/block:IfShowTags}
+                  {/block:Date}
+                </div>
+              </div>
+              <!-- Pagination-->
+              {block:Date}
+              {block:PermalinkPagination}
+              <div class="row">
+                <div class="post-navigation container col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-bottom-double">{block:PreviousPost}<a href="{PreviousPost}" title="{lang:Previous}" class="btn-pagination pagination-previous pull-left square-box horizontal-align vertical-align"><i class="fa fa-2x fa-caret-left">
+                      <div class="sr-only">{lang:Previous}</div></i></a>{/block:PreviousPost}
+                  {block:NextPost}<a href="{NextPost}" title="{lang:Next}" class="btn-pagination pagination-next pull-right square-box horizontal-align vertical-align"><i class="fa fa-2x fa-caret-right"></i>
+                    <div class="sr-only">{lang:Next}</div></a>{/block:NextPost}
+                </div>
+              </div>{/block:PermalinkPagination}
+              {/block:Date}
+            </article>
+            <div class="row">
+              <div class="post-aside col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                {block:Date}
+                {block:IfDisqusShortname}
+                <div class="page-comments pad-top-triple">
+                  <!-- Disqus-->
+                  <div class="disqus-comments">{block:IfDisqusShortname}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = '{text:Disqus Shortname}'; // Required - Enter shortname in Tumblr Theme Options
+  var disqus_url = '{Permalink}';
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+{/block:IfDisqusShortname}
+                  </div>
+                </div>{/block:IfDisqusShortname}
+                {/block:Date}
+              </div>
+            </div>
+          </div>
+          <!-- Notes-->
+          {block:IfShowNotes}
+          {block:PostNotes}
+          <div class="notes row {select:Notes Text}">
+            <div class="container">
+              <div class="post-notes col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-top-double pad-bottom-double">
+                <h3 class="post-notes-title h1 text-center pad-bottom-double">{NoteCountWithLabel}</h3>{PostNotes}
+              </div>
+            </div>
+          </div>{/block:PostNotes}
+          {/block:IfShowNotes}{/block:Posts}{/block:PermalinkPage}
+        </div>
+      </div>
+      <div class="wrapper-footer">{block:PermalinkPage}{block:IfShowHire}
+        <div class="block-hire-bottom col-xs-12 hire-box order-7 {select:Hire Block Text}">
+          <div class="container island-double">
+            <div class="col-xs-10 col-xs-offset-1">
+              <div class="hire-text pull-left h5">{text:Hire Text}</div>
+              <div class="hire-button pull-right"><a href="{text:Hire Link}" class="btn btn-outline h5 {select:Buttons Style}">{text:Hire Button Text}</a></div>
+            </div>
+          </div>
+        </div>{/block:IfShowHire}{block:IfShowNewsletter}
+        <div class="block-newsletter col-xs-12 {select:Newsletter Block Text} {select:Newsletter Position}">
+          <div class="container island-triple text-center">
+            <div class="widget widget-newsletter nomargin">
+              <h2 class="block-title nomargin">{text:Newsletter Title}</h2>
+              <p class="block-text muted">{text:Newsletter Text}</p>{text:Newsletter Code}
+              {block:IfNotNewsletterCode}
+              <p>Please enter your Mailchimp code in the Customizer > Newsletter Code (or disable the Newsletter Widget and/or Block).</p>{/block:IfNotNewsletterCode}
+            </div>
+          </div>
+        </div>{/block:IfShowNewsletter}{/block:PermalinkPage}
+        <!-- Footer-->
+        <footer class="site-footer {select:Footer Text}">
+          <div class="container text-center island-double">
+            <!-- Social Media-->
+            <div class="widget-socialmedia widget-socialmedia-bottom round-icons island hidden-sm hidden-md hidden-lg hidden-xl">{block:IfShowSocialMediaIcons}
+              <ul class="social-icons list-inline">{block:IfBehanceURL}
+                <li><a href="{text:Behance URL}"><i class="fa fa-behance icon"></i><span class="sr-only">Behance</span></a></li>{/block:IfBehanceURL}
+                {block:IfDribbbleURL}
+                <li><a href="{text:Dribbble URL}"><i class="fa fa-dribbble icon"></i><span class="sr-only">Dribbble</span></a></li>{/block:IfDribbbleURL}
+                {block:IfDeviantartURL}
+                <li><a href="{text:Deviantart URL}"><i class="fa fa-deviantart icon"></i><span class="sr-only">Deviantart</span></a></li>{/block:IfDeviantartURL}
+                {block:IfFacebookURL}
+                <li><a href="{text:Facebook URL}"><i class="fa fa-facebook icon"></i><span class="sr-only">Facebook</span></a></li>{/block:IfFacebookURL}
+                {block:IfFlickrURL}
+                <li><a href="{text:Flickr URL}"><i class="fa fa-flickr icon"></i><span class="sr-only">Flickr</span></a></li>{/block:IfFlickrURL}
+                {block:IfGooglePlusURL}
+                <li><a href="{text:GooglePlus URL}"><i class="fa fa-google-plus icon"></i><span class="sr-only">Google+</span></a></li>{/block:IfGooglePlusURL}
+                {block:IfInstagramURL}
+                <li><a href="{text:Instagram URL}"><i class="fa fa-instagram icon"></i><span class="sr-only">Instagram</span></a></li>{/block:IfInstagramURL}
+                {block:IfLinkedinURL}
+                <li><a href="{text:Linkedin URL}"><i class="fa fa-linkedin icon"></i><span class="sr-only">Linkedin</span></a></li>{/block:IfLinkedinURL}
+                {block:IfPinterestURL}
+                <li><a href="{text:Pinterest URL}"><i class="fa fa-pinterest-p icon"></i><span class="sr-only">Pinterest</span></a></li>{/block:IfPinterestURL}
+                {block:IfTumblrURL}
+                <li><a href="{text:Tumblr URL}"><i class="fa fa-tumblr icon"></i><span class="sr-only">Tumblr</span></a></li>{/block:IfTumblrURL}
+                {block:IfTwitterURL}
+                <li><a href="{text:Twitter URL}"><i class="fa fa-twitter icon"></i><span class="sr-only">Twitter</span></a></li>{/block:IfTwitterURL}
+                {block:IfVimeoURL}
+                <li><a href="{text:Vimeo URL}"><i class="fa fa-vimeo icon"></i><span class="sr-only">Vimeo</span></a></li>{/block:IfVimeoURL}
+                {block:IfYouTubeURL}
+                <li><a href="{text:YouTube URL}"><i class="fa fa-youtube icon"></i><span class="sr-only">YouTube</span></a></li>{/block:IfYouTubeURL}
+              </ul>{/block:IfShowSocialMediaIcons}
+            </div>
+            <div class="copyright bt micro">{text:Copyright}</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://static.tumblr.com/kqvcxur/0Lsnzehl0/resume.js"></script>
+    <script>
+      $(document).ready(function(){
+          if( window.location.pathname === '/customize/{PlaintextName}' ||
+              window.location.pathname === '/customize/{PlaintextName}?redirect_to=/settings/blog/{PlaintextName}' ||
+              window.location.pathname === '/customize' ||
+              window.location.pathname === '/customize/' ||
+              window.location.pathname === '/') {
+              $('#top').addClass('is-home');
+          }
+      });
+      
+    <script>
+      $(document).ready(function(){
+          $(".tmblr-embed").fitVids();
+      });
+    </script>{/block:PermalinkPage}{block:PermalinkPage}
+    <!-- Keyboard Navigation ////////////////////////////////////////////////////////////////////////////-->
+    <script src="https://static.tumblr.com/kqvcxur/ayhnz5kxe/mousetrap.min.js"></script>{block:Pagination}
+    <script>
+      {block:PreviousPage}Mousetrap.bind('left', function() { window.location.href="{PreviousPage}"; });{/block:PreviousPage}
+      {block:NextPage}Mousetrap.bind('right', function() { window.location.href="{NextPage}"; });{/block:NextPage}
+    </script>{/block:Pagination}
+    {block:PermalinkPagination}
+    <script>
+      {block:PreviousPost}Mousetrap.bind('left', function() { window.location.href="{PreviousPost}"; });{/block:PreviousPost}
+      {block:NextPost}Mousetrap.bind('right', function() { window.location.href="{NextPost}"; });{/block:NextPost}
+    </script>{/block:PermalinkPagination}
+    {block:DayPagination}
+    <script>
+      {block:PreviousDayPage}Mousetrap.bind('left', function() { window.location.href="{PreviousDayPage}"; });{/block:PreviousDayPage}
+      {block:NextDayPage}Mousetrap.bind('right', function() { window.location.href="{NextDayPage}"; });{/block:NextDayPage}
+    </script>{/block:DayPagination}
+    <script>
+      Mousetrap.bind('h', function() { window.location.href="/"; });
+      Mousetrap.bind('r', function() { window.location.href="/random"; });
+    </script>{/block:PermalinkPage}
+    <!-- Footer Custom Code ////////////////////////////////////////////////////////////////////////////-->
+    {text:Footer HTML Code}
+  </body>
+</html>
