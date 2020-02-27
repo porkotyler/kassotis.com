@@ -1,3 +1,5 @@
+![](https://i.imgur.com/fqkK07B.png)
+
 # Supermarkt Kassotis
 Kassotis or "Kass" is a global chain of stores co-owned by Chao Bear Apparel and retail partners such as Rakuten, Walmart and Target. Some of them are traditional e-commerce websites and others have unique characteristics that set them apart from the competition. This is the website of the main enterprise that redirects you to the partner stores.
 
