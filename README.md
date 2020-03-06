@@ -1,4 +1,4 @@
-![](https://mir-cdn.behance.net/v1/rendition/project_modules/fs/e2e6a989509621.5e6274806ddab.png)
+![](https://i.imgur.com/fqkK07B.png)
 
 # Supermarkt Kassotis
 Kassotis or "Kass" is a global chain of stores co-owned by Chao Bear Apparel and retail partners such as Rakuten, Walmart and Target. Some of them are traditional e-commerce websites and others have unique characteristics that set them apart from the competition. This is the website of the main enterprise that redirects you to the partner stores.
@@ -45,3 +45,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Tumblr API Forum
 * Tumblr Engineering blog
 * Tumblr Theme developer forum
+
+![](https://mir-cdn.behance.net/v1/rendition/project_modules/fs/e2e6a989509621.5e6274806ddab.png)
